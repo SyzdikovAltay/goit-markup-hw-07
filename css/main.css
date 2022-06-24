@@ -1,0 +1,44 @@
+:root {
+  --hover-color:#2196F3;
+  --icon-color:#AFB1B8;
+  --text-description-color:#757575;
+  --white-fill: #ffffff;
+  --white-text:#ffffff;
+  --dark-text:#000000;
+}
+
+* {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ol, ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+body {
+  background-color: #fff;
+}/*# sourceMappingURL=main.css.map */
