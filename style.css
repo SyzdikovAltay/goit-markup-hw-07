@@ -1,5 +1,29 @@
-
-main{
+*{
+    text-decoration: none;
+    list-style-type: none;  
+}
+:root{
+    --hover-color:#2196F3;
+    --icon-color:#AFB1B8;
+    --text-description-color:#757575;
+    --white-fill: #ffffff;
+    --white-text:#ffffff;
+    --dark-text:#000000;
+}
+h1,h2,h3,h4,h5,p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+ol,ul{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+img{
+    display: block;
+}
+body{
+    font-family: 'Roboto';
 }
 .visually-hidden {
     position: absolute;
@@ -13,6 +37,15 @@ main{
     clip: rect(0 0 0 0);
     overflow: hidden;
   }
+main{
+}
+.container{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
 
                                 /* Хедер */
@@ -728,8 +761,7 @@ footer .webstudiolink{
     
     top: 0;
     left: 0;
-    /* bottom: 0;
-    right: 0; */
+
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.2);
@@ -738,7 +770,6 @@ footer .webstudiolink{
 .modal{
     position: absolute;
     display: flex;
-    /* justify-content:center; */
     flex-direction: column;
     align-items: center;
     padding: 40px;
@@ -831,7 +862,6 @@ footer .webstudiolink{
 
 .backdrop-span{
     display: block;
-    /* margin-bottom: 4px; */
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
@@ -842,8 +872,7 @@ footer .webstudiolink{
     color: var(--text-description-color);
 }
 .checkbox-label{
-    display: flex;
-    justify-content:center;
+    display: inline-flex;
     align-items: center;
     margin-top: 20px;
 }
@@ -863,15 +892,19 @@ footer .webstudiolink{
     width: 16px;
     height: 15px;
     border: 1px solid #212121 ;
+    border-color: #212121 ;
     cursor: pointer;
     margin-right: 9px;
     border-radius: 2px;
+    background-repeat: no-repeat;
+    background-position: center center;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.checkbox-label:hover::before,
-.checkbox-label:focus::before{
+.checkbox-label:hover::before{
     border-color:var(--hover-color);
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop-checkbox:focus + .checkbox-label::before{
+    border-color: var(--hover-color);    
 }
 .backdrop-text{
     font-weight: 400;
@@ -887,9 +920,9 @@ footer .webstudiolink{
 }
 .backdrop-checkbox:checked + .checkbox-label::before{
     color: var(--hover-color);
+    border-color: var(--hover-color);
     background-color:var(--hover-color);
     background-image: url(./for-sprite/galka.svg);
-    /* object-fit:contain; */
     background-repeat: no-repeat;
     
 }
